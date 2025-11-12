@@ -1,0 +1,7 @@
+.hero-container {
+  height: calc(100vh - 88px);
+  width: 100%;
+  background-color: var(--bg-main);
+  padding: var(--container-padding);
+  color: var(--font-light-1);
+}
