@@ -86,3 +86,68 @@
   font-weight: 400;
   color: var(--font-dark-1);
 }
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #333;
+  transition: 0.3s;
+}
+
+.close-button {
+  display: none !important;
+}
+
+/* === Side Menu (1104px and below) === */
+@media (max-width: 1104px) {
+  .menubar-container {
+    padding: var(--container-padding-tab);
+  }
+  .menubar-button-container {
+    position: fixed;
+    top: 0;
+    right: -300px; /* hidden offscreen */
+    height: 100vh;
+    width: 280px;
+    background-color: var(--container-main);
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 120px;
+    gap: 32px;
+    box-shadow: -4px 0 14px rgba(0, 0, 0, 0.15);
+    transition: right 0.2s ease-in-out;
+    opacity: 1; /* keep visible for slide */
+    transform: none; /* cancel old transform */
+  }
+
+  .menubar-button-container.show {
+    right: 0;
+    z-index: 9999;
+    color: var(--font-dark-1);
+    background-color: var(--container-main);
+  }
+
+  .hamburger {
+    position: relative;
+    /* z-index: 101; */
+    display: block;
+  }
+
+  .close-button {
+    display: block !important;
+  }
+}
+
+@media (max-width: 628px) {
+  .menubar-container {
+    padding: var(--container-padding-mobile);
+  }
+  .menubar-logo {
+    font-size: var(--font-size-rem-2);
+  }
+
+  .hamburger {
+    margin-top: 4px;
+  }
+}

@@ -36,6 +36,16 @@ const Projects = () => {
       bgColor: "#279b59ff",
       buttonText: "See Details",
     },
+    {
+      title: "Traffic Analyzer",
+      subtitle: "Real-time congestion visualization",
+      description:
+        "Built a dashboard using the TomTom API for live traffic insights and congestion heatmaps.",
+      tags: ["React", "API", "Data Visualization"],
+      image: Weather,
+      bgColor: "#c2cdc7ff",
+      buttonText: "See Details",
+    },
   ];
   return (
     <div className="projects-container">
