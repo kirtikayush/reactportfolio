@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import "./Menubar.css";
+import { handleClick } from "../../utils/handleClick";
+import { socialLinks } from "../../assets/variables";
+import { Link } from "react-scroll";
 
 const Menubar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,10 +22,46 @@ const Menubar = () => {
         <div className="close-button" onClick={() => setIsOpen(false)}>
           <X size={28} />
         </div>
-        <div className="menubar-button">About</div>
-        <div className="menubar-button">Projects</div>
-        <div className="menubar-button">Contacts</div>
-        <div className="menubar-button">Resume</div>
+        {/* <div className="menubar-button">About</div> */}
+        {/* <div className="menubar-button">Projects</div> */}
+        {/* <div className="menubar-button">Contacts</div> */}
+        <Link
+          to="about"
+          smooth={true}
+          duration={600}
+          offset={-50}
+          className="menubar-button"
+          onClick={() => setIsOpen(false)}
+        >
+          About
+        </Link>
+
+        <Link
+          to="projects"
+          smooth={true}
+          duration={600}
+          offset={-50}
+          className="menubar-button"
+          onClick={() => setIsOpen(false)}
+        >
+          Projects
+        </Link>
+        <Link
+          to="footer"
+          smooth={true}
+          duration={500}
+          offset={-50}
+          className="menubar-button"
+          onClick={() => setIsOpen(false)}
+        >
+          Contact
+        </Link>
+        <div
+          className="menubar-button"
+          onClick={() => handleClick(socialLinks.resume)}
+        >
+          Resume
+        </div>
       </div>
     </div>
   );

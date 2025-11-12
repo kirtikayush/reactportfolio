@@ -49,7 +49,7 @@
   font-size: var(--font-size-rem-1);
 }
 
-.menubar-button-container div {
+.menubar-button-container > * {
   /* height: 100%; */
   padding: 12px 24px;
   /* margin: 16px 0 16px 0; */
@@ -62,12 +62,12 @@
   transition: background-color 0.2s ease, box-shadow 0.3s ease;
 }
 
-.menubar-button-container div:hover {
+.menubar-button-container > *:hover {
   background-color: white;
   box-shadow: var(--shadow-soft);
 }
 
-.menubar-button-container div:last-child {
+.menubar-button-container > *:last-child {
   padding: 14px 32px;
   margin-left: 16px;
   background-color: var(--bg-main);
@@ -75,16 +75,22 @@
   box-shadow: var(--shadow-soft);
   border: 1.5px solid transparent;
   transition: background-color 0.2s ease, box-shadow 0.2s ease, border 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease, scale 0.2s ease;
 }
 
-.menubar-button-container div:last-child:hover {
+.menubar-button-container > *:last-child:hover {
   box-shadow: var(--shadow-strong);
-
+  scale: 1.05;
   background-color: var(--accent-main);
   border: 1.5px solid var(--bg-main);
   font-weight: 400;
   color: var(--font-dark-1);
+}
+
+.menubar-button-container > *:last-child:active {
+  background-color: var(--container-main);
+  scale: 0.9;
+  transition: scale 0.05s ease;
 }
 
 .hamburger {
