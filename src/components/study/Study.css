@@ -1,0 +1,11 @@
+.study-container {
+  padding: var(--container-padding);
+  background-color: var(--container-main);
+  color: var(--font-dark-1);
+}
+
+.study-container h1 {
+  font-size: var(--font-size-title);
+  text-align: center;
+  font-weight: 400;
+}

@@ -1,0 +1,76 @@
+.website-container {
+  background-color: var(--container-main);
+  height: 100%;
+  margin: 0;
+  padding: var(--container-padding);
+  /* background-color: red; */
+  color: var(--font-dark-1);
+  padding-bottom: 36px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.website-container h1 {
+  margin: 0;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 400;
+  font-size: var(--font-size-title);
+}
+
+.website-content {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* width: 100%; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  gap: 32px;
+}
+
+.website-card {
+  padding: 16px 16px;
+  display: flex;
+  width: 440px;
+  gap: 24px;
+  background-color: hsl(0, 0%, 80%);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  transition: scale 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+
+  /* background-color: red; */
+}
+
+.website-card:hover {
+  box-shadow: var(--shadow-strong);
+  background-color: hsl(0, 0%, 75%);
+  cursor: pointer;
+  scale: 1.01;
+}
+
+.website-card:active {
+  box-shadow: var(--shadow-soft);
+  background-color: hsl(0, 0%, 65%);
+  scale: 0.995;
+  /* color: var(--font-dark-2); */
+  transition: scale 0.1s ease-in-out, background-color 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out;
+}
+
+.website-card img {
+  width: 200px;
+  border-radius: 8px;
+  aspect-ratio: 1.8;
+  object-fit: cover;
+}
+
+.website-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: var(--font-size-rem-2);
+}
